@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Order Now | Printastic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <header class="site-header" data-theme>
+      <div class="container flex between center-v">
+        <a href="/" class="logo"
+          ><span class="logo-icon">P</span
+          ><span class="logo-text">Printastic</span></a
+        >
+        <nav class="main-nav" id="mainNav" aria-label="Primary Navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="designer.html">Design Your Own</a></li>
+            <li><a href="order.html" class="active">Order</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle dark mode"
+          ></button
+          ><button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="mainNav"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="page-hero compact">
+        <div class="container">
+          <h1 class="h1">Place Your Order</h1>
+          <p class="lead">
+            Fast, transparent & secure. We'll confirm before printing.
+          </p>
+        </div>
+      </section>
+      <section class="order section-pad">
+        <div class="container order-grid">
+          <form id="orderForm" class="panel" novalidate>
+            <h3>Order Details</h3>
+            <label
+              >Full Name<input
+                name="name"
+                type="text"
+                required
+                placeholder="Your Name" /></label
+            ><label
+              >Email<input
+                name="email"
+                type="email"
+                required
+                placeholder="you@example.com" /></label
+            ><label
+              >Phone<input
+                name="phone"
+                type="tel"
+                required
+                placeholder="(+country) number" /></label
+            ><label
+              >Shirt Color<select name="color" required>
+                <option value="White">White</option>
+                <option value="Black">Black</option>
+                <option value="Gray">Gray</option>
+                <option value="Navy">Navy</option>
+              </select></label
+            ><label
+              >Print Method<select name="method" required>
+                <option>Heat Press Vinyl</option>
+                <option>DTF</option>
+                <option>Hybrid</option>
+              </select></label
+            ><label
+              >Sizes & Quantities<textarea
+                name="sizes"
+                placeholder="e.g. S-10, M-15, L-5"
+                required
+              ></textarea></label
+            ><label>Need By<input type="date" name="needBy" required /></label
+            ><label
+              >Upload Design<input
+                type="file"
+                name="design"
+                accept="image/*"
+                required /></label
+            ><label
+              >Notes<textarea
+                name="notes"
+                placeholder="Any special instructions"
+              ></textarea>
+            </label>
+            <div class="summary-box">
+              <p class="small">
+                Estimated total: <span id="estTotal">₹0</span>
+              </p>
+            </div>
+            <button class="btn accent block" type="submit">Submit Order</button>
+            <p
+              id="formMsg"
+              class="small status"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </form>
+          <div class="panel">
+            <h3>Estimator</h3>
+            <p class="small">
+              Pricing auto-adjusts by tier. Add total quantity for estimate.
+            </p>
+            <label
+              >Total Quantity<input
+                id="qtyInput"
+                type="number"
+                min="1"
+                value="1"
+            /></label>
+            <div class="tier-display" id="tierDisplay"></div>
+            <div class="est-breakdown" id="estBreakdown"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="logo footer-logo" href="/"
+            ><span class="logo-icon">P</span
+            ><span class="logo-text">Printastic</span></a
+          >
+          <p class="small">
+            Custom heat-press T-shirt printing. Single units & bulk orders with
+            premium quality control.
+          </p>
+        </div>
+        <nav aria-label="Footer">
+          <h4>Explore</h4>
+          <ul class="foot-links">
+            <li><a href="products.html">Products</a></li>
+            <li><a href="designer.html">Design Tool</a></li>
+            <li><a href="order.html">Order</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h4>Contact</h4>
+          <ul class="foot-links">
+            <li>
+              <a href="mailto:hello@printastic.local">hello@printastic.local</a>
+            </li>
+            <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li><a href="contact.html">Contact Form</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <div class="socials">
+            <a href="#" aria-label="Instagram" class="soc">IG</a
+            ><a href="#" aria-label="Facebook" class="soc">FB</a
+            ><a href="#" aria-label="TikTok" class="soc">TT</a>
+          </div>
+        </div>
+      </div>
+      <div class="legal small" style="margin-bottom: 0.5rem; text-align: center;">
+        Designed and Developed By - Varun Jangid
+      </div>
+      <div class="legal small">
+        © <span id="year"></span> Printastic. All rights reserved.
+      </div>
+    </footer>
+    <script src="js/main.js" type="module"></script>
+    <script src="js/order.js" type="module"></script>
+  </body>
+</html>

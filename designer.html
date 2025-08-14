@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Design Your Own | Printastic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <header class="site-header" data-theme>
+      <div class="container flex between center-v">
+        <a href="/" class="logo"
+          ><span class="logo-icon">P</span
+          ><span class="logo-text">Printastic</span></a
+        >
+        <nav class="main-nav" id="mainNav" aria-label="Primary Navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="designer.html" class="active">Design Your Own</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle dark mode"
+          ></button
+          ><button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="mainNav"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="page-hero compact">
+        <div class="container">
+          <h1 class="h1">Design Your Own</h1>
+          <p class="lead">
+            Upload, resize, recolor & add text. Live preview updates instantly.
+          </p>
+        </div>
+      </section>
+      <section class="designer section-pad">
+        <div class="container designer-grid">
+          <div class="design-stage">
+            <div class="shirt" id="shirtCanvasWrapper">
+              <img
+                src="assets/Untitled_design__1_-removebg-preview.png"
+                alt="Blank T-shirt"
+                class="shirt-base"
+              />
+              <div
+                id="designLayer"
+                class="design-layer"
+                aria-live="polite"
+              ></div>
+            </div>
+          </div>
+          <div class="design-controls">
+            <div class="panel" data-observe>
+              <h3>Upload Artwork</h3>
+              <input
+                type="file"
+                id="uploadInput"
+                accept="image/*"
+                class="file-input"
+              />
+              <p class="small">PNG with transparency recommended.</p>
+            </div>
+            <div class="panel" data-observe>
+              <h3>Add Text</h3>
+              <input
+                type="text"
+                id="textInput"
+                placeholder="Your slogan"
+                maxlength="28"
+              />
+              <div class="flex g10 wrap">
+                <input type="color" id="textColor" value="#ffffff" /><select
+                  id="textWeight"
+                >
+                  <option value="400">Regular</option>
+                  <option value="600">Semi-bold</option>
+                  <option value="700">Bold</option>
+                </select>
+              </div>
+              <button class="btn primary sm" id="addTextBtn">Add Text</button>
+            </div>
+            <div class="panel" data-observe>
+              <h3>Controls</h3>
+              <label class="range-wrap"
+                >Scale
+                <input
+                  type="range"
+                  id="scaleRange"
+                  min="0.3"
+                  max="2"
+                  step="0.01"
+                  value="1" /></label
+              ><label class="range-wrap"
+                >Rotate
+                <input
+                  type="range"
+                  id="rotateRange"
+                  min="-180"
+                  max="180"
+                  step="1"
+                  value="0" /></label
+              ><button class="btn ghost sm" id="removeSelected">
+                Remove Selected
+              </button>
+            </div>
+            <div class="panel" data-observe>
+              <h3>Finalize</h3>
+              <button class="btn accent block" id="saveMockup">
+                Save Mockup</button
+              ><a href="order.html" class="btn primary block"
+                >Proceed to Order</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="logo footer-logo" href="/"
+            ><span class="logo-icon">P</span
+            ><span class="logo-text">Printastic</span></a
+          >
+          <p class="small">
+            Custom heat-press T-shirt printing. Single units & bulk orders with
+            premium quality control.
+          </p>
+        </div>
+        <nav aria-label="Footer">
+          <h4>Explore</h4>
+          <ul class="foot-links">
+            <li><a href="products.html">Products</a></li>
+            <li><a href="designer.html">Design Tool</a></li>
+            <li><a href="order.html">Order</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h4>Contact</h4>
+          <ul class="foot-links">
+            <li>
+              <a href="mailto:hello@printastic.local">hello@printastic.local</a>
+            </li>
+            <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li><a href="contact.html">Contact Form</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <div class="socials">
+            <a href="#" aria-label="Instagram" class="soc">IG</a
+            ><a href="#" aria-label="Facebook" class="soc">FB</a
+            ><a href="#" aria-label="TikTok" class="soc">TT</a>
+          </div>
+        </div>
+      </div>
+      <div class="legal small" style="margin-bottom: 0.5rem; text-align: center;">
+        Designed and Developed By - Varun Jangid
+      </div>
+      <div class="legal small">
+        © <span id="year"></span> Printastic. All rights reserved.
+      </div>
+    </footer>
+    <script src="js/main.js" type="module"></script>
+    <script src="js/designer.js" type="module"></script>
+  </body>
+</html>

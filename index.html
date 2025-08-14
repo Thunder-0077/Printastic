@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Printastic | Custom T-Shirt Printing</title>
+  <!-- Preload primary hero image for faster Largest Contentful Paint -->
+  <link rel="preload" as="image" href="assets/generated-image.png" />
+  <meta name="description" content="Printastic - Custom heat press T-shirt printing for single and bulk orders. Design your own now!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <!-- Branded loading spinner overlay -->
+  <div id="loadingSpinner" style="opacity:1;">
+    <div class="loading-logo"></div>
+  </div>
+  <script>
+  window.addEventListener('load', function() {
+    var spinner = document.getElementById('loadingSpinner');
+    if (spinner) {
+      spinner.style.opacity = '0';
+      setTimeout(function(){ spinner.style.display = 'none'; }, 400);
+    }
+  });
+  </script>
+
+  <header class="site-header" data-theme>
+    <div class="container flex between center-v">
+      <a href="/" class="logo">
+        <span class="logo-icon">P</span>
+        <span class="logo-text">Printastic</span>
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="Primary Navigation">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="designer.html">Design Your Own</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <!-- Remove or hide the theme toggle button in your header -->
+        <!-- <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"></button> -->
+        <button class="hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg-animated"></div>
+      <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1 class="mega gradient-text animated-headline">Your Design.<br>Your Style.<br><span class="outline">Your Printastic T-shirt.</span></h1>
+          <p class="lead">Custom heat-press printing for one-off statements & large-scale drops. Premium fabrics. Vivid colors. Zero hassle.</p>
+          <div class="cta-group">
+            <a href="designer.html" class="btn primary lg" data-tilt data-tilt-glare="true">Start Designing</a>
+            <a href="products.html" class="btn ghost lg">View Services</a>
+          </div>
+          <ul class="trust-list">
+            <li><strong>48h</strong> Rush Option</li>
+            <li><strong>Eco Inks</strong> Vibrant & Safe</li>
+            <li><strong>5★</strong> Local Reviews</li>
+          </ul>
+        </div>
+        <div class="hero-showcase" id="heroSlider" role="region" aria-label="Featured printed T‑shirts">
+          <div class="hero-slides">
+            <figure class="hero-slide is-active">
+              <img src="assets/generated-image.png" alt="Minimal white custom printed T‑shirt on hanger" loading="eager" fetchpriority="high" decoding="async">
+            </figure>
+            <figure class="hero-slide">
+              <img src="assets/Gemini_Generated_Image_luncyhluncyhlunc.png" alt="Vivid colorful graphic print close‑up on black T‑shirt" loading="lazy" decoding="async">
+            </figure>
+            <figure class="hero-slide">
+              <img src="assets/Gemini_Generated_Image_5v8wur5v8wur5v8w.png" alt="Stack of freshly printed colorful shirts" loading="lazy" decoding="async">
+            </figure>
+          </div>
+          <div class="hero-controls">
+            <button class="hero-nav hero-prev" type="button" aria-label="Previous slide">‹</button>
+            <div class="hero-dots" id="heroDots" role="tablist" aria-label="Select slide"></div>
+            <button class="hero-nav hero-next" type="button" aria-label="Next slide">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SVG Wave Divider -->
+    <div class="wave-divider">
+      <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width:100%;height:80px;display:block;">
+        <path d="M0,40 C480,120 960,0 1440,80 L1440,120 L0,120 Z" fill="url(#waveGradient)"/>
+        <defs>
+          <linearGradient id="waveGradient" x1="0" y1="0" x2="1440" y2="0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#127bff"/>
+            <stop offset="1" stop-color="#ff6b00"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <!-- Steps / How It Works -->
+    <section class="steps section-pad">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="h1">Order in 3 Easy Steps</h2>
+          <p class="sub">From idea to wearable art—fast.</p>
+        </header>
+        <div class="steps-grid">
+          <div class="step-card" data-observe>
+            <div class="step-num">1</div>
+            <h3>Design</h3>
+            <p>Upload artwork or craft text with our live designer. Real-time preview guarantees accuracy.</p>
+          </div>
+          <div class="step-card" data-observe>
+            <div class="step-num">2</div>
+            <h3>Approve</h3>
+            <p>We fine-tune alignment & color. You confirm the mockup before anything is printed.</p>
+          </div>
+          <div class="step-card" data-observe>
+            <div class="step-num">3</div>
+            <h3>Print & Ship</h3>
+            <p>Precision heat-press + quality blanks = durable, vivid tees delivered to your door.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section-pad alt-bg">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="h1">Loved by Creators & Teams</h2>
+          <p class="sub">Why locals choose Printastic.</p>
+        </header>
+        <div class="testimonial-track" id="testimonialTrack" aria-live="polite">
+          <article class="testimonial" data-observe>
+            <p>“Needed 60 shirts in two days. Not only on time—quality was insane.”</p>
+            <div class="who"><span class="avatar" aria-hidden="true">VK</span> Varun K.</div>
+          </article>
+          <article class="testimonial" data-observe>
+            <p>“The color accuracy on my artwork blew me away. Zero cracking after washes.”</p>
+            <div class="who"><span class="avatar" aria-hidden="true">AR</span> Anita R.</div>
+          </article>
+          <article class="testimonial" data-observe>
+            <p>“Interface was simple. I designed, approved, and ordered in under 10 minutes.”</p>
+            <div class="who"><span class="avatar" aria-hidden="true">SM</span> S. Mehra</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner section-pad">
+      <div class="container flex between center-v wrap g30">
+        <h2 class="h1 m0">Ready to Wear Your Idea?</h2>
+        <a href="designer.html" class="btn accent lg">Launch Designer</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo footer-logo" href="/">
+          <span class="logo-icon">P</span><span class="logo-text">Printastic</span>
+        </a>
+        <p class="small">Custom heat-press T-shirt printing. Single units & bulk orders with premium quality control.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h4>Explore</h4>
+        <ul class="foot-links">
+          <li><a href="products.html">Products</a></li>
+          <li><a href="designer.html">Design Tool</a></li>
+          <li><a href="order.html">Order</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h4>Contact</h4>
+        <ul class="foot-links">
+          <li><a href="mailto:hello@printastic.local">hello@printastic.local</a></li>
+          <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+          <li><a href="contact.html">Contact Form</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <div class="socials">
+          <a href="#" aria-label="Instagram" class="soc">IG</a>
+          <a href="#" aria-label="Facebook" class="soc">FB</a>
+          <a href="#" aria-label="TikTok" class="soc">TT</a>
+        </div>
+      </div>
+    </div>
+    <div class="legal small" style="margin-bottom: 0.5rem; text-align: center;">
+      Designed and Developed By - Varun Jangid
+    </div>
+    <div class="legal small">
+      © <span id="year"></span> Printastic. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="js/main.js" type="module"></script>
+</body>
+</html>
